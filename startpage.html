@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="CSS\DeluxePark.css">
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+    <script type='text/javascript'>
+        function init_map()
+        {
+            var myOptions = { zoom: 10, center: new google.maps.LatLng(59.32932349999999, 18.068580800000063), mapTypeId: google.maps.MapTypeId.ROADMAP };
+            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+            marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(59.32932349999999, 18.068580800000063) });
+            infowindow = new google.maps.InfoWindow({ content: '<strong>Deluxe Parkering</strong><br>Stockholm, Sweden<br>' });
+            google.maps.event.addListener(marker, 'click', function () { infowindow.open(map, marker); }); infowindow.open(map, marker);
+        }
+
+        google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Hem</a>
+        <a href="#news">Boka Parkering</a>
+        <a href="#contact">Övriga Tjänster</a>
+        <a href="#about">Kontakt</a>
+        <a href="#about">Hitta Oss</a>
+    </div>
+    <div class="colBeige">BEIGE</div><br />
+    <div class="colDarkblue">DARKBLUE</div><br />
+    <div class="colMarrone">MARRONE</div>
+
+    <div style='overflow:hidden;height:400px;width:400px;'>
+        <style>
+        </style>
+        <div id='gmap_canvas' style='height:400px;width:400px;'></div>
+    </div>
+</body>
+</html>
