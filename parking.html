@@ -3,7 +3,7 @@
 <head>
     <meta name="author" content="Anna Viberg" />
     <meta name="application-name" content="Deluxe Parkering" />
-    <meta name="description" content="Basic HTML-page for use as a hybrid mobilapplication" />
+    <meta name="description" content="Basic HTML-page for use as a web mobilapplication" />
     <title>Välkommen till Deluxe Parkering</title>
     <link href="CSS/DeluxePark.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Pinyon Script" rel='stylesheet'>
@@ -66,10 +66,10 @@
                     </div>
                     <div style="padding:0px 25px 25px 25px;">
                         <div class="boxFormWithShadow">
-                            <table style="border:0px">
-                                <tr style="border-bottom:1px dotted black">
-                                    <td colspan="2">
-                                        <span>Våra områden och parkerings priser&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <table class="tblNoSpacing">
+                                <tr>
+                                    <td colspan="2" class="boxHeadline">
+                                        <span>Våra områden och priser</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -107,42 +107,46 @@
                             </table>
                         </div><br /><br />
                         <div class="boxFormWithShadow">
-                            <table style="border:0px">
+                             <table class="tblNoSpacing">
+                                <tr>
+                                    <td colspan="2" class="boxHeadline">
+                                        <b><span>Boka Parkering</span></b>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td colspan="2">
                                         <span>Plats för upphämntning</span><br />
-                                        <input style="width:289px; font-family:Calibri" type="text" />
+                                        <input class="input-largeTextBox" type="text" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
                                         <span>Plats för återlämning</span><br />
-                                        <input style="width:289px; font-family:Calibri" type="text" />
+                                        <input class="input-largeTextBox" type="text" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <span>Upphämtning</span><br />
-                                        <input style="font-family:Calibri; width:90px;" type="date" />
+                                        <input class="input-dateTextBox" type="date" />
                                     </td>
                                     <td>
                                         <span>Tid</span><br />
-                                        <input style="font-family:Calibri" type="time" />
+                                        <input class="input-timeTextBox" type="time" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <span>Återlämning</span><br />
-                                        <input style="font-family:Calibri; width:90px;" type="date" />
+                                        <input class="input-dateTextBox" type="date" />
                                     </td>
                                     <td>
                                         <span>Tid</span><br />
-                                        <input style="font-family:Calibri" type="time" />
+                                        <input class="input-timeTextBox" type="time" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2" style="text-align:right; padding:2px 10px 0px 0px">
-                                        <!--<input type="button" value="Boka" />-->
                                         <button class="button">Boka</button>
                                     </td>
                                 </tr>
