@@ -340,3 +340,14 @@ body {
 
 .topNavMenu {
 }
+
+#imgFindUsImage {
+    height: 50px;
+    width: 50px
+}
+
+#gmap_canvas {
+    width: 400px;
+    height: 400px;
+    border: 2px solid #070c47
+}
