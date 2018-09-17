@@ -1,11 +1,10 @@
-body {
+ody {
     margin: 0px 0px 0px 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:#f7f5f2;
 }
 
-#tblMain 
-{
+#tblMain {
     width:100%;
 }
 
@@ -223,6 +222,26 @@ body {
     font-weight: bold
 }
 
+.button {
+    background-color: #f7f5f2;
+    border: 1px solid #070c47;
+    color: #070c47;
+    font-size:small;
+    width:50px;
+    height:20px;
+    /*padding: 10px 20px;*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /*margin: 4px 2px;*/
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .button:hover {
+        font-weight:bold;
+    }
+
 
 
 
@@ -282,9 +301,5 @@ body {
         color: #f2e7bf;
     }
 
-.topNavMenu 
-}
-
-.test{
-	color:green;
+.topNavMenu {
 }
