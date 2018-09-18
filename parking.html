@@ -3,7 +3,7 @@
 <head>
     <meta name="author" content="Anna Viberg" />
     <meta name="application-name" content="Deluxe Parkering" />
-    <meta name="description" content="Basic HTML-page for use as a hybrid mobilapplication" />
+    <meta name="description" content="Basic HTML-page for use as a web mobilapplication" />
     <title>Välkommen till Deluxe Parkering</title>
     <link href="CSS/DeluxePark.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Pinyon Script" rel='stylesheet'>
@@ -32,11 +32,11 @@
                         </div>
                         <div id="divTopMenu">
                             <div id="divTopMenuLinks" class="topNavMenu">
-                                <a href="#">HEM</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                <a href="#" id="active">BOKA PARKERING</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                <a href="#">ÖVRIGA TJÄNSTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                <a href="#">KONTAKT</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                <a href="#">HITTA OSS</a>
+                                <a href="index.html">HEM</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <a href="parking.html" id="active">BOKA PARKERING</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <a href="otherServices.html">ÖVRIGA TJÄNSTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <a href="contact.html">KONTAKT</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <a href="findUs.html">HITTA OSS</a>
                             </div>
                         </div>
                     </div>
@@ -48,8 +48,111 @@
             </tr>
             <tr>
                 <td class="tdMainLeftAndRight"></td>
-                <td class="pageHeaderText">
-                    <!--Add content for specific page-->
+                <td>
+                    <div class="pageIconHeadlineContainer">
+                        <div class="pageIconHeadlineImgBox">
+                            <img src="Images/imgIconPark.png" />
+                        </div>
+                        <div id="pageIconHeadlineTextBox">
+                            <span>Boka Parkering</span>
+                        </div>
+                    </div>
+                    <div class="pageInfoText">
+                        <span>
+                            Det ska vara enkelt att boka parkering hos oss. För att göra det så enkelt som möjligt
+                            för dig som kund ber vi dig bara fylla in formuläret nedan och skicka in din bokningen så sköter vi resten.<br />
+                            Enkelt, snabbt och bekvämt!
+                        </span>
+                    </div>
+                    <div class="divContainingsForms">
+                        <div class="boxFormWithShadow">
+                            <table class="tblNoSpacing">
+                                <tr>
+                                    <td colspan="2" class="boxHeadline">
+                                        <span>Våra områden och priser</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>- Stockholm City</span>
+                                    </td>
+                                    <td>
+                                        <span>250kr/h</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>- Östermalm</span>
+                                    </td>
+                                    <td>
+                                        <span>270kr/h</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>- Söder</span>
+                                    </td>
+                                    <td>
+                                        <span>250kr/h</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>- Djurgården</span>
+                                    </td>
+                                    <td>
+                                        <span>200kr/h</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><br /><br />
+                        <div class="boxFormWithShadow">
+                             <table class="tblNoSpacing">
+                                <tr>
+                                    <td colspan="2" class="boxHeadline">
+                                        <b><span>Boka Parkering</span></b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <span>Plats för upphämntning</span><br />
+                                        <input class="input-largeTextBox" type="text" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <span>Plats för återlämning</span><br />
+                                        <input class="input-largeTextBox" type="text" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Upphämtning</span><br />
+                                        <input class="input-dateTextBox" type="date" />
+                                    </td>
+                                    <td>
+                                        <span>Tid</span><br />
+                                        <input class="input-timeTextBox" type="time" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Återlämning</span><br />
+                                        <input class="input-dateTextBox" type="date" />
+                                    </td>
+                                    <td>
+                                        <span>Tid</span><br />
+                                        <input class="input-timeTextBox" type="time" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="tdBookingForm">
+                                        <button class="button">Boka</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </td>
                 <td class="tdMainLeftAndRight"></td>
             </tr>

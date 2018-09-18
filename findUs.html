@@ -3,10 +3,25 @@
 <head>
     <meta name="author" content="Anna Viberg" />
     <meta name="application-name" content="Deluxe Parkering" />
-    <meta name="description" content="Basic HTML-page for use as a hybrid mobilapplication" />
+    <meta name="description" content="Basic HTML-page for use as a web mobilapplication" />
     <title>Välkommen till Deluxe Parkering</title>
-    <link href="CSS/DeluxePark.css" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/DeluxePark.css">
     <link href="https://fonts.googleapis.com/css?family=Pinyon Script" rel='stylesheet'>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+    <script type='text/javascript'>
+
+        function init_map()
+        {
+            var myOptions = { zoom: 10, center: new google.maps.LatLng(59.32932349999999, 18.068580800000063), mapTypeId: google.maps.MapTypeId.ROADMAP };
+            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+            marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(59.32932349999999, 18.068580800000063) });
+            infowindow = new google.maps.InfoWindow({ content: '<strong>Deluxe Parkering</strong><br>Stockholm, Sweden<br>' });
+            google.maps.event.addListener(marker, 'click', function () { infowindow.open(map, marker); }); infowindow.open(map, marker);
+        }
+
+        google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+
 </head>
 <body>
     <div style="overflow-x:auto;">
@@ -32,11 +47,11 @@
                         </div>
                         <div id="divTopMenu">
                             <div id="divTopMenuLinks" class="topNavMenu">
-                                <a href="#">HEM</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                <a href="#">BOKA PARKERING</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                <a href="#">ÖVRIGA TJÄNSTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                <a href="#">KONTAKT</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                <a href="#" id="active">HITTA OSS</a>
+                                <a href="index.html">HEM</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <a href="parking.html">BOKA PARKERING</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <a href="otherServices.html">ÖVRIGA TJÄNSTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <a href="contact.html">KONTAKT</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <a href="findUs.html" id="active">HITTA OSS</a>
                             </div>
                         </div>
                     </div>
@@ -46,6 +61,53 @@
                     <!--Top menu end-->
                 </td>
             </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div class="pageIconHeadlineContainer">
+                        <div class="pageIconHeadlineImgBox">
+                            <img src="Images/imgIconFindUsBlue.png" />
+                        </div>
+                        <div id="pageIconHeadlineTextBox">
+                            <span>Hitta Oss</span>
+                        </div>
+                    </div>
+                    <div class="pageInfoText">
+                        <span>
+                            Vill du besöka vårat kontor så hittar du adressen samt en karta nedan.<br /><br />
+                        </span>
+                        
+                        <table class="tblNoSpacing">
+                            <tr>
+                                <td rowspan="4">
+                                    <img id="imgFindUsImage" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAYAAADnRuK4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAT+SURBVHhe7d1NUhtHGMbxaVQS3tk+gVTJBZwTxCwCWcIN4huEEyReZencgNzAyVJkgb3LDi7glHQD2NmoYNKv3KpSET5G876j6Y//r4qSehZ8aJ6a7n4koQoAAAAAAAAAAABAeb6vxi/kKwxxj51wizsOdseT3aE7l68fhuNX4TDucOEWayQwrnLvnasm4dDlbV3v/b2YX4QxAgJ0x8Fg/LoauPf+7v+nrpt6b3oz/xBG8JjC1uyPxocPhkcM3NnBcPxTGMEbhNvi+fD87Ketd/7u44tm5w6/HTy/+nRz9U84UjQC5Pk1z687zv3m7z77euRxPmg/frPz3P17e1X8dFb0Gki26Lsj984/CK2mpbquPpwuZnthWKRiAyTheTZ0J/4ROAyHWik9REUGyCo8ay4+X9d7H6v5ZRgXo7gASUFY37qztY7HhL8SzeqqPiqtKyoqQPcUhNaKKxyLCdCjBaG1ggrHIorEJwtCawUVjtn3QI0LQmuFFI5ZB2jTgtBaCYVjlmsgbUG4Rrbl6itXzl1RdmugVcdjER6/LX/jd1XfhXFrftf3en84OQvDrGR1BTIsCJfhOb2e/ykD2f77qVACoL0aZVc4ZhMgw4LwonL10fTLfBbGS8twjpYhUr06MbfCMYsAGRaE94ZnxSpEXjaFY/IBsioIZaH7ZVEfNZleZD0j65owbC+DwjHpRbRZQVhXvzcNj5AdVV1Vf4RhexkUjsn2QGYFoQ/PdDE7nldXn8ORRj7dXP4lHY+nuxIlXjgmGSCrgtAvZo9PF/O3YbgxKQjl5EthGA61knLhmNQayLQgrOvj6WKun4a8sA5T9zwpFo7JBKirjsdK6IrOw7C11EKURIBiD89KiYVj9AHquiC0VlrhGHWAtlUQWiupcIw2QH0UhNZKKByjLBL7KgitlVA4RtcD9V0QWsu9cIwqQLEUhNZyLhyjWAPFWhBay7Fw7D1AqXQ8VnIrHHsNUGnhWcmpcOwtQKkVhNZyKRx7CVCqBaG1HArHrQcoh4LQWsqF41aLxFwKQmspF45b64FyKwitpVo4biVAuRaE1lIsHDtdA5VSEFpLqXDsLECldjxWUikcOwkQ4bGRQuFoHqDSC0JrsReOpgGiIOxGzIWjWYAoCLsXY+FoEiApCP2V58Tf1c7VlZ+rXxKehx2MJnW4q1PXbyx2teomOhSEJuERhGdLnDuRcxdGrakCJAWhD8/2/4ElTMi5k3MYhq20CpAs6vZHkxO/xfwlHEKi5Bxq/v3exgFadTx+8RTluwSwOVmYtw3RRgEyLAgRGQmRX6CfyzkOhxppHCApCOUTjAlP1l5t+inVjQIk37CLT7hBfOQcy9MnTUP0ZICkIJRvSHiK8sKf8/NlOfyERwNk9gpCpKnBKxwfDJB1QYhEPVE4mj8bf9em1fv0etb575Sy2B7Pxrsw4D4ECCoECCoECCoECCrZ7sLMXnhlpK+/i10YokaAoEKAoEKAoEKAoEKAoEKAoEKAoEKAoEKAoEKAoMJzYcGmPzfXv2tTXIGgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgQoCgEt37wvrS9fvC+sL7whA1AgQVAgQVAgQVAgQVAgQVAgQVAgQVAgQVAgQVAgQAAAAAAAAAAAAAAAAAAIBeVdV/FzPQmKEsxwcAAAAASUVORK5CYII=" />
+                                <td />
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span>Deluxe Parkering</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span>Kungsgatan 58</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span>11122, Stockholm</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+		    <!-- The map -->
+                    <div class="divContainingsForms">
+                        <div id="gmap_canvas"></div>
+                    </div>
             <tr>
                 <td class="tdMainLeftAndRight"></td>
                 <td class="pageHeaderText">

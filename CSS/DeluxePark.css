@@ -1,7 +1,13 @@
 body {
-    margin: 0px 0px 0px 0px;
+    margin: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:#f7f5f2;
+}
+
+/* Change the color on the active page and underline it */
+#active {
+    color: #470620;
+    text-decoration: underline
 }
 
 #tblMain {
@@ -25,12 +31,136 @@ body {
     background-color:#f7f5f2;
     font-size:small
 }
-/* Not working! */
-.topNavMenu div {
-    position:absolute;
-    bottom:5px;
-    right:5px
+
+#imgFindUsImage {
+    height: 50px;
+    width: 50px
 }
+
+/* Map Settings */
+#gmap_canvas {
+    width: 400px;
+    height: 400px;
+    border: 2px solid #070c47
+}
+
+#pageIconHeadlineTextBox {
+    font-size: 45px;
+    color: #070c47;
+    padding: 20px 0px 0px 10px;
+}
+
+#divFirstPageIcons {
+    border: none;
+    display: flex;
+    justify-content: space-around
+}
+
+/*Inheritans for all mailForm classes base settings*/
+[class*="mailForm-"] {
+    vertical-align: text-top;
+    padding-right: 6px;
+}
+
+.mailForm-Adress {
+    padding-top: 4px;
+}
+
+    .mailForm-Adress img {
+        height: 20px;
+    }
+
+.mailForm-Phone {
+    padding-top: 6px;
+}
+
+    .mailForm-Phone img {
+        height: 20px;
+    }
+
+.mailForm-Mail {
+    padding-top: 10px;
+}
+
+    .mailForm-Mail img {
+        height: 20px;
+    }
+
+/*Inheritans for all input classes base settings*/
+[class*="input-"] {
+    font-family: calibri;
+    font-size: small;
+}
+
+.input-largeTextBox {
+    width: 289px;
+}
+
+.input-dateTextBox {
+    width: 190px;
+}
+
+.input-timeTextBox {
+    width: 89px;
+}
+
+/*The boxes containing different forms. Ex. booking and mail.*/
+.boxFormWithShadow {
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    box-shadow: 5px 10px 18px #888888;
+    color: #470620;
+    background-color: #f2ede6;
+    padding: 5px;
+    width: 295px;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.boxFormService {
+    border: 2px solid #070c47;
+    border-radius: 15px;
+    box-shadow: 5px 10px 18px #888888;
+    color: #470620;
+    background-color: #f2ede6;
+    padding: 5px;
+    width: 200px;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+    .boxFormService img {
+        height: 26px;
+    }
+
+.tdBookingForm {
+    text-align: right;
+    padding: 2px 10px 0px 0px
+}
+
+.tdButtonServiceForm {
+    text-align: center;
+    padding: 5px 0px 5px 0px
+}
+
+.tdTopImageServiceForm {
+    text-align: center;
+    border-bottom: 2px solid #070c47
+}
+
+    .tdTopImageServiceForm img {
+        height:40px;
+    }
+
+.divContainingsForms {
+    padding: 0px 25px 25px 25px;
+}
+
+.boxHeadline {
+    padding-bottom: 4px;
+    font-weight: bold
+}
+
 /* Style the links inside the navigation bar */
 .topNavMenu a {
     font-size: small;
@@ -43,11 +173,6 @@ body {
         text-decoration: underline
     }
 
-/* Change the color on the active page and underline it */
-#active {
-    color: #470620;
-    text-decoration: underline
-}
 
 .imgTopMenuSmall {
     width:15px;
@@ -71,6 +196,11 @@ body {
         font-size: 22px;
         font-weight: bold
     }
+
+.tblNoSpacing {
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
 
 .tdClean {
     padding: 0px;
@@ -104,13 +234,6 @@ body {
     width:15%
 }
 
-
-
-
-
-
-
-
 .iconLink img {
     border: 2px solid #070c47;
     border-radius: 4px;
@@ -119,9 +242,108 @@ body {
     height:144px;
 }
 
-.iconLink img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+.firstPageHeader {
+    color: #f7f5f2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 250px;
+    width: 100%;
+    background-image: url(../Images/imgIndexBackground.jpg);
+    background-size: contain;
+    text-align: center;
 }
+
+    .firstPageHeader span {
+        font-family: Pinyon Script;
+        font-size: 70px;
+        font-weight: bold
+    }
+
+.firstPageTopIcons {
+}
+
+    .firstPageTopIcons td {
+        align-content: center;
+        text-align: center;
+        padding: 15px 70px 15px 70px
+    }
+
+    .firstPageTopIcons div {
+        border: 4px solid #070c47;
+        border-radius: 6px
+    }
+
+    .firstPageTopIcons img {
+        padding: 3px;
+        width: 60px;
+        height: 60px;
+    }
+
+.pageIconHeadlineContainer {
+    padding: 25px;
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 45px;
+    color: #070c47
+}
+
+    .pageIconHeadlineContainer img {
+        height: 60px;
+        width: 60px;
+        padding: 3px
+    }
+
+.pageIconHeadlineImgBox {
+    border: 4px solid #070c47;
+    width: 66px;
+    height: 66px;
+    border-radius: 6px
+}
+
+.pageInfoText {
+    padding: 0px 25px 25px 25px;
+}
+
+    .pageInfoText span {
+        font-size: small;
+        color: #470620
+    }
+
+.tdServiceFormText {
+    text-align: left;
+    font-size: 15px
+}
+
+.indexPageInfoText {
+    padding: 10px 25px 10px 25px;
+    color: #470620;
+    color: #470620;
+    font-size: small
+}
+
+#indexPageInfoTextIntro {
+    font-family: Pinyon Script;
+    font-size: 30px;
+    font-weight: bold
+}
+
+.button {
+    background-color: #f7f5f2;
+    border: 1px solid #070c47;
+    color: #070c47;
+    font-size:small;
+    width:60px;
+    height:20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .button:hover {
+        font-weight:bold;
+    }
 
 .tdLeftBackground {
     background-image: linear-gradient(to left, #efedd5, #070c47);
@@ -129,30 +351,6 @@ body {
 
 .tdRightBackground {
     background-image: linear-gradient(to right, #efedd5, #070c47);
-}
-
-
-.tblNoSpacing 
-{
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-
-/*The page colors*/
-.colBeige {
-    background-color:#f2e7bf;
-}
-
-.colLightBeige {
-    background-color: #f7f5f2;
-}
-
-.colDarkblue {
-    background-color:#070c47;
-}
-
-.colMarrone {
-    background-color:#470620;
 }
 
 /* Add a black background color to the top navigation */
@@ -172,7 +370,7 @@ body {
         font-size:small;
     }
 
-/* Change the color of links on hover */
+    /* Change the color of links on hover */
     .topnav a:hover {
         color: #f2e7bf;
         text-decoration:underline
@@ -183,5 +381,32 @@ body {
         color: #f2e7bf;
     }
 
+.textareaMailForm {
+    width: 287px;
+}
+/* Not working! */
 .topNavMenu {
+}
+
+    .topNavMenu div {
+        position: absolute;
+        bottom: 5px;
+        right: 5px
+    }
+
+/*The page colors ONLY FOR REF.*/
+.colBeige {
+    background-color: #f2ede6;
+}
+
+.colLightBeige {
+    background-color: #f7f5f2;
+}
+
+.colDarkblue {
+    background-color: #070c47;
+}
+
+.colMarrone {
+    background-color: #470620;
 }
