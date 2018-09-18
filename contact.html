@@ -3,7 +3,7 @@
 <head>
     <meta name="author" content="Anna Viberg" />
     <meta name="application-name" content="Deluxe Parkering" />
-    <meta name="description" content="Basic HTML-page for use as a hybrid mobilapplication" />
+    <meta name="description" content="Basic HTML-page for use as a web mobilapplication" />
     <title>Välkommen till Deluxe Parkering</title>
     <link href="CSS/DeluxePark.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Pinyon Script" rel='stylesheet'>
@@ -32,11 +32,11 @@
                         </div>
                         <div id="divTopMenu">
                             <div id="divTopMenuLinks" class="topNavMenu">
-                                <a href="#">HEM</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                <a href="#">BOKA PARKERING</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                <a href="#">ÖVRIGA TJÄNSTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                <a href="#" id="active">KONTAKT</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                                <a href="#">HITTA OSS</a>
+                                <a href="index.html">HEM</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <a href="parking.html">BOKA PARKERING</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <a href="otherServices.html">ÖVRIGA TJÄNSTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <a href="contact.html" id="active">KONTAKT</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <a href="findUs.html">HITTA OSS</a>
                             </div>
                         </div>
                     </div>
@@ -45,6 +45,96 @@
                     </div>
                     <!--Top menu end-->
                 </td>
+            </tr>
+<tr> 
+                <td></td>
+                <td>
+                    <div class="pageIconHeadlineContainer">
+                        <div class="pageIconHeadlineImgBox">
+                            <img src="Images/imgIconContactBlue.png" />
+                        </div>
+                        <div id="pageIconHeadlineTextBox">
+                            <span>Kontakt Information</span>
+                        </div>
+                    </div>
+                    <div class="pageInfoText">
+                        <span>
+                            Här nedan hittar du all information du behöver för att komma in kontakt med oss.
+                            För att få svar snabbast möjligt så rekomenderar vi att du fyller i formuläret nedan och skickar det så svarar vår helpdesk inom 48h.<br /><br />
+                            Med Vänliga Hälsningar<br />
+                            Personalen på Deluxe Parkering
+                        </span><br /><br />
+                        <table class="tblNoSpacing">
+                            <tr>
+                                <td class="mailForm-Adress">
+                                    <img src="Images/imgHomeHouse.png" />
+                                </td>
+                                <td>
+                                    <span>Deluxe Parkering<br />Kungsgatan 58<br />11122, Stockholm<br /></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mailForm-Phone">
+                                    <img src="Images/imgPhone.png" />
+                                </td>
+                                <td>
+                                    <span>0700-101010<br /></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mailForm-Mail">
+                                    <img src="Images/imgMailBlue.png" />
+                                </td>
+                                <td>
+                                    <span>
+                                        parkering@deluxe.se
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="divContainingsForms">
+                        <div class="boxFormWithShadow">
+                            <table class="tblNoSpacing">
+                                <tr>
+                                    <td class="boxHeadline">
+                                        <b><span>Skicka Neddelande</span></b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Namn</span><br />
+                                        <input class="input-largeTextBox" type="text" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Mail address</span><br />
+                                        <input class="input-largeTextBox" type="email" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Ämne</span><br />
+                                        <input class="input-largeTextBox" type="text" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Meddelande</span><br />
+                                        <textarea rows="4" class="textareaMailForm"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdBookingForm">
+                                        <button class="button">Skicka</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+                <td></td>
             </tr>
             <tr>
                 <td class="tdMainLeftAndRight"></td>
