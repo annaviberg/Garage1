@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Application Info</title>
+</head>
+<body>
+    <div style="overflow-x:auto;">
+        <table style="width:100%">
+            <tr>
+                <td style="width:20%">.</td>
+                <td style="width:60%">
+                    <div style="font-family:Arial; font-size:15px">
+                        <span style="font-family:Calibri; font-size:25px">
+                            Information om valet av applikationstyp
+                        </span><br />
+                        Till ert företag har vi valt att bygga en applikation av typen webapplikation. Detta val gjorde vi baserat på flertalet argument, ett av de starkaste argumenten för att välja denna typ av applikation var tiden det tar att bygga en webapplikation i jämförelse med andra alternativ. En webapplikation är idag det överlägset snabbaste sättet att bygga en applikation som fungerar i alla typer av mobiltelefoner och även i andra enheter då den körs i en webbrowser. Med det sagt så har ni nu också tre av våra andra argument för varför vi valde att just bygga en webapplikation. Den fungerar i alla typer av mobiler (så länge de har en webbrowser), det går att komma åt applikationen från en dator eller annan enhet och sist men absolut inte minst så återkommer vi till det här med tiden, tid är nämligen pengar, mycket pengar. En webapplikation kostar inte i närheten av vad det till exempel skulle ha kostat att bygga två stycken native applikationer, en för Android och en för iOS. Den kostnaden är oftast inte försvarbar för en förstagångs applikation där man inte vet vilket gensvar man kommer att få från användarna. En annan detalj man inte ska glömma i sammanhanget är att när man skapar en applikation för första gången så kommer man med största sannolikhet inte få allting rätt på första försöket. Man kan komma att ångra att man satte menyn till vänster eller så får man in synpunkter från användare som man vill lägga till eller ta bort. Hade vi då byggt två stycken native applikationer hade vi nu varit tvungna att göra om, inte bara en, utan två uppsättningar kod och dessutom be användarna att ladda ned de nya uppdateringarna. Detta slipper man helt med en webapplikation då det är en kodbas att ändra i och en ändring går ut direkt till alla användare nästa gång de använder applikationen. Det här var några av argumenten för varför vi gjorde de valet vi gjorde, här nedan kommer jag presentera andra alternativ som ni kan ha att ta ställning till inför framtiden.
+
+                        <br /><br /><span style="font-family:Calibri; font-size:25px">
+                            Progressiva webapplikationer (PWA)
+                        </span><br />
+                        Progressiva webapplikationer påminner väldigt mycket om ”vanliga” webapplikationer, de laddar på samma sätt vi en URL och de bygger på HTML, stylesheets och JavaScript. Så vad är då de stora fördelarna med en progressiv webapplikation? I en PWA kan vi komma åt inställningar/funktioner i mobilens hårdvara som tidigare bara var möjligt för nativ applikationer. Detta har blivit möjligt sedan mobilernas webbläsare har blivit mer och mer avancerade och fått funktioner som ”service workers” och ”shell architecture. Nackdelen blir att det som avgör vilka funktioner man kommer kunna använda är vad det är för webbläsare applikationen körs i. Men idag så stödjer de flesta webbläsare de viktigaste funktionerna som push meddelanden, hantera data synkroniserat, offlineläge och att kunna uppdatera vissa delar av applikationen. Nackdelarna med PWA är i stora drag de samma som med webapplikationer, du kommer inte i närheten av den prestandan en nativ applikation har, man kommer inte åt alla funktioner exempelvis kameran, GPS ‘en, kalendern mf. och de går inte att optimera för att dra så lite batteri som möjligt. Något applikationer är kända för att göra.
+
+                        <br /><br /><span style="font-family:Calibri; font-size:25px">
+                            Native applikationer
+                        </span><br />
+                        En native applikation är en applikation som är specifikt byggt för just den plattformen din mobila enhet använder, tex. Android eller iOS. De är också byggda i olika språk som passar för just den plattformen, Java i huvudsak för Android och Swift/Object-C för iOS. Detta gör att man kan utnyttja alla mobilen egenskaper till fullo och samtidigt få ett UX/UI som användaren känner igen och är bekväm med. En native applikation laddas ned till enheten från tex. AppStore och finns sedan på din enhet i just den versionen du laddat ned tills du väljer att ta bort den eller väljer att uppdatera den till en nyare version. Att applikationen laddas ner gör att man i de flesta fall slipper tänka på att behöva ha nätverksanslutning för att kunna använda applikationen vilket är fallet med en webapplikation. Att koden är specifik för just den plattformen gör att du har möjligheten att på en smidigt sett komma åt alla de funktioner som finns på enheten och kan använda dem i din applikation. Du kan också optimera applikationen för att spara på batteri och minimera hur mycket nätverk din applikation använder om den tex. inte för tillfället har en wifi-anslutning. Det finns självfallet nackdelar med denna typ av applikationer också, och den mest uppenbara är att du behöver skriva en kod för varje plattform du vill att din applikation ska kunna användas på. Att man använder olika programmeringsspråk underlättar inte heller då man kanske måste hitta två olika programmerings team då folk ofta är inriktade mot antingen Android eller iOS vilket självfallet drar iväg kostnaden. Är tanken att man ska publicera sin applikation på både Android och iOS så kommer det även att dra ut på tiden då man bygger likadana funktioner på väldigt olika sett på de olika plattformarna. Eftersom det är två olika kod källor så kommer det finnas olika fel i de olika koderna, fel som bara dyker upp hos Android användarna slipper de som använder iOS och tvärt om. Det blir alltså dubbelt jobb med allt från kodning, testning, publicering och bug fixar, men du har en snygg, snabb, användarvänlig applikation. Sedan får man avgöra vad som väger tyngst.
+
+                        <br /><br /><span style="font-family:Calibri; font-size:25px">
+                            Hybrida applikationer
+                        </span><br />
+                        En hybrid applikation är lite vad namnet avslöjar, en applikation som fungerar på flera plattformar men härstammar från samma kod. Precis som en webapplikation är hybrid applikationer byggda i JavaScript, HTML och CSS men de körs inte i din mobils webbläsaren utan istället i något som kallas en Webview. Men med hjälp av olika lösningar som tex. PhoneGap som är som en bro mellan webview`n och enhetens native SDK så kan man använda sig av alla enhetens funktioner precis som en native applikation kan. Du kan tex. använda kameran från din applikation eller få tillgång till GPS ‘en. Det finns dock några stora nackdelar med hybrid applikationer, en av dem är prestandan. Hur bra kod du än har skrivit så blir inte applikationen bättre än webview´n den körs i. Det är inte heller lätt att få kod att fungera lika bra mot så olika plattformar som Android och iOS är, det krävs en hel del fixar i koden för att få det hela att gå ihop vilket kan göra det tidskrävande och i slutändan svårt att få en bra överblick över. Du kan inte heller göra alla användare nöjda när det kommer till UX/UI, ofta är användarna så vana vid det ena eller det andra att minsta förändring kan vara ett irritationsmoment. Men vill du ha upp en applikation snabbt på flera plattformar för att testa om en idè fungerar och vill att den ska vara nedladdningsbar så är en hybrid applikation ett alternativ.
+
+                 <br />   </div>
+                </td>
+                <td style="width:20%">.</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
